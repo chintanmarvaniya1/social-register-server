@@ -1,4 +1,4 @@
-const getserverstatus = require('../../service/status/getserverstatus.js')
+const getserverstatus = require('../../service/statusServices/getserverstatus.js')
 
 const serverStatusController = async (req, res) => {
     try {
