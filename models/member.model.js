@@ -6,7 +6,6 @@ mongoose.Promise = global.Promise;
 const MEMBER = {
     FAMILY_ID : {
         type : mongoose.Schema.ObjectId,
-        required : true,
         ref : 'FAMILY'
     },
     FIRST_NAME :{type: String,required: true},
