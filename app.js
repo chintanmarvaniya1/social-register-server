@@ -1,16 +1,12 @@
 const express = require("express");
 const cors = require('cors');
 
-//const {statusAPI,memberAPI,authAPI} = require("./routes/index.js")
-//const responseFormatter = require('./middleware/responseFormatter');
+const {statusAPI} = require("./routers/index.js")
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-//app.use("/api",statusAPI);
-//app.use(responseFormatter);
-//app.use("/api",memberAPI);
-//app.use("/api",authAPI)
+app.use("/api",statusAPI);
 
 module.exports = app;
