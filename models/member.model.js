@@ -23,7 +23,11 @@ const MEMBER = {
     OCCUPATION:{type: String},
     OCCUPATION_ADDRESS:{type: String},
     RESIDENTIAL_ADDRESS:{type: String},
-    VARIFICATION_STATUS:{type:Boolean, default:false}
+    VARIFICATION_STATUS: {
+        type : mongoose.Schema.ObjectId,
+        ref : 'MEMBER',
+        default:null,
+    }
 }
 const memberSchema = new Schema(MEMBER,{timestamps:true})
 
