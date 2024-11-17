@@ -16,7 +16,7 @@ const addFamily = async (id) => {
     if (newFamily) {
         return {
             status: 200,
-            userID: UpdatedFamily.id,
+            userID: newFamily.id,
             message: 'User Registerd successfully'
         };
 
