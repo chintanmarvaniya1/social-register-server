@@ -26,27 +26,6 @@ const addFamily = async (id) => {
             message: 'Failed to Register Family Contact Admin'
         };
     }
-
-    // if (newFamily) {
-    //     const UpdatedFamily = await MEMBER.findByIdAndUpdate(newUser.id, { FAMILY_ID: newFamily.id }, { new: true });
-    //     if (UpdatedFamily) {
-    //         return {
-    //             status: 200,
-    //             userID:UpdatedFamily.
-    //             message: 'User Registerd successfully'
-    //         };
-    //     } else {
-    //         return {
-    //             status: 500,
-    //             message: 'Failed to Register Family Contact Admin'
-    //         };
-    //     }
-    // } else {
-    //     return {
-    //         status: 500,
-    //         message: 'Failed to Register Family Contact Admin'
-    //     };
-    // }
 }
 
 module.exports = addFamily;
