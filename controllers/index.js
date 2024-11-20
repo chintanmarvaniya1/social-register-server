@@ -3,6 +3,7 @@ const sendOTP = require("./authControllers/sendOtp.controller.js");
 const verifyOTP = require("./authControllers/verifyOtp.controller.js");
 const addMember = require("./memberControllers/addmember.controller.js");
 const updateMember = require("./memberControllers/updatemember.controller.js");
+const addFamily = require("./familyController/addfamily.controller.js");
 
 module.exports  = {
     serverStatus,
@@ -10,4 +11,5 @@ module.exports  = {
     verifyOTP,
     addMember,
     updateMember,
+    addFamily
 };
