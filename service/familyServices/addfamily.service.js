@@ -11,7 +11,10 @@ const addFamily = async (body) => {
     if(body.isHOF){
         newFamily = new FAMILY({
             HOF: body.id,
-            MEMBERLIST: body.memberList
+            MEMBERLIST: body.memberList,
+            VILLAGE:body.village,
+            CAST:body.cast
+
         });
     }else{
         newFamily = new FAMILY({
