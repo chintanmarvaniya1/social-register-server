@@ -15,17 +15,17 @@ const updateMember = async (id,body) => {
         };
     }
 
-    const UpdatedFamily = await MEMBER.findByIdAndUpdate(id, body , { new: true });
-    if (UpdatedFamily) {
+    const updateMember = await MEMBER.findByIdAndUpdate(id, body , { new: true });
+    if (updateMember) {
         return {
             status: 200,
-            userID: UpdatedFamily.id,
-            message: 'User Registerd successfully'
+            userID: updateMember.id,
+            message: 'Member Updted successfully'
             };
     } else {
         return {
             status: 500,
-            message: 'Failed to Register Family Contact Admin'
+            message: 'Failed to Update Member Contact Admin'
         };
     }
 }

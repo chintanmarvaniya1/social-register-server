@@ -37,7 +37,14 @@ const addMember = async (body) => {
         const newUser = new MEMBER(DBObject);
         await newUser.save();
         if (newUser) {
-            const addFamilyResponse = await addFamily(newUser.id);
+            const familybody = {
+                isHOF : true,
+                id:newUser.id,
+                memberList:[newUser.id],
+                cast:body.cast,
+                village:body.village
+            }
+            const addFamilyResponse = await addFamily(familybody);
             if (addFamilyResponse.status === 200) {
                 const updateMemberResponse = await updateMember(newUser.id,{FAMILY_ID:addFamilyResponse.userID});
                 if(updateMemberResponse.status === 200){
